@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Water/Water.shader" type="Shader" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Water/Water.gd" type="Script" id=3]
+
+[sub_resource type="ShaderMaterial" id=1]
+
+shader = ExtResource( 1 )
+shader_param/tint = Color( 0.529412, 0.823529, 1, 1 )
+shader_param/sprite_scale = Vector2( 1, 1 )
+shader_param/x_scale = 0.67
+shader_param/highlight_thickness = 0.15
+shader_param/wave_reduction = 128.0
+
+[sub_resource type="RectangleShape2D" id=2]
+
+extents = Vector2( 32, 30 )
+
+[node name="Water" type="Sprite"]
+material = SubResource( 1 )
+z_index = 4
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2( 0, 2 )
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
