@@ -4,4 +4,4 @@ The sprites in this folder belong to [**Spelunky**](https://spelunkyworld.com/).
 
 > This project is for educational purposes only.
 
-Sprites were obtained from [Spriters Resource](https://www.spriters-resource.com/search/?q=spelunky).
+Sprites were obtained from [Spriters Resource](https://www.spriters-resource.com/pc_computer/spelunky/).
