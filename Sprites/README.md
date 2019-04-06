@@ -6,3 +6,4 @@
 ## [FlaF (me)](https://artstation.com/flaf)
  - Arcade.png
  - Particles/round-soft.png
+ > If you use this, credit me at [my ArtStation](https://artstation.com/flaf).
