@@ -29,5 +29,5 @@ Through the **tool** keyword, it is possible to change player skin before runtim
 
 The skins are located in the [skins directory](Sprites/Player).
 
-## Video Sample
+## [:tv: Video Sample](http://www.youtube.com/watch?v=3_7PjK7vzG4)
 [![Preview image failed to load!](img/extra.gif)](http://www.youtube.com/watch?v=3_7PjK7vzG4)
