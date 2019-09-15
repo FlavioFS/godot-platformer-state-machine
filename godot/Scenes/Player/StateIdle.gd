@@ -1,6 +1,6 @@
-extends "res://Scenes/Player/BasePlayerState.gd"
+extends BasePlayerState
 
-func run(player:KinematicBody2D):
+func run(player: KinematicBody2D):
 	if player.vy > 0:
 		player.vy = 0
 	if player.ladder_area and (\

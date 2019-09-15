@@ -1,8 +1,8 @@
 extends KinematicBody2D
-
+class_name Player
 signal hud
 
-export var gravity : float = 4000
+export var gravity : float = 60
 
 var horizontal : int = 0
 var vertical : int = 0
@@ -24,7 +24,7 @@ onready var ladder_timer : Timer = $Timers/LadderTimer
 onready var platform_timer : Timer = $Timers/PlatformTimer
 onready var sprite : Sprite = $Sprite
 onready var anim : AnimationPlayer = $Sprite/AnimationPlayer
-onready var state_machine = $PlayerStates
+onready var state_machine: PlayerFSM = $PlayerStates
 onready var tween : Tween = $Tween
 onready var waves : Particles2D = $Waves
 
@@ -35,7 +35,7 @@ func _physics_process(delta):
 	update_inputs()
 	state_machine.run()
 	emit_signal("hud", "%s" % state_machine.active_state.tag)
-	
+
 func update_inputs():
 	horizontal = (
 		int(Input.is_action_pressed("ui_right"))

@@ -1,7 +1,8 @@
 extends Node2D
+class_name PlayerFSM
 
 var states : Dictionary = {}
-var active_state
+var active_state: BasePlayerState
 var player : KinematicBody2D
 
 func generate_state_dictionary():
@@ -9,7 +10,7 @@ func generate_state_dictionary():
 		if state.tag:
 			states[state.tag] = state
 
-func init(player:KinematicBody2D):
+func init(player: KinematicBody2D):
 	self.player = player
 	generate_state_dictionary()
 	active_state = states.idle

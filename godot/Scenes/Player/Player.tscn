@@ -15,7 +15,6 @@
 [ext_resource path="res://Animations/walk.tres" type="Animation" id=13]
 
 [sub_resource type="Animation" id=1]
-
 resource_name = "air"
 length = 0.1
 loop = true
@@ -33,7 +32,6 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=2]
-
 length = 0.8
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")
@@ -49,7 +47,6 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=3]
-
 length = 1.8
 loop = true
 step = 0.05
@@ -67,11 +64,9 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=4]
-
 extents = Vector2( 11.28, 29.7102 )
 
 [sub_resource type="CapsuleShape2D" id=5]
-
 radius = 16.7305
 height = 12.3406
 
@@ -82,7 +77,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_lock_": true
 }
-gravity = 60.0
 
 [node name="Timers" type="Node2D" parent="."]
 editor/display_folded = true
@@ -127,16 +121,15 @@ tag = "swim"
 [node name="Walk" type="Node2D" parent="PlayerStates"]
 script = ExtResource( 8 )
 tag = "walk"
-walk_speed = 300.0
 
 [node name="Waves" parent="." instance=ExtResource( 9 )]
 position = Vector2( 0, 15 )
 z_index = 0
 amount = 20
+preprocess = 1.0
 explosiveness = 0.0
 
 [node name="Sprite" type="Sprite" parent="."]
-editor/display_folded = true
 texture = ExtResource( 10 )
 vframes = 12
 hframes = 12

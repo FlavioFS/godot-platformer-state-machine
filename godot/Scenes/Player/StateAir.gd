@@ -1,9 +1,8 @@
-extends "res://Scenes/Player/BasePlayerState.gd"
+extends BasePlayerState
 
 export var midair_speed : float = 300
-var velocity : Vector2 = Vector2.ZERO
 
-func enter(player):
+func enter(player: KinematicBody2D):
 	if player.anim.current_animation == "jump":
 		yield (player.anim, "animation_finished")
 		if player.state_machine.active_state.tag == tag:
@@ -11,7 +10,7 @@ func enter(player):
 	else:
 		.enter(player) # Base class
 
-func run(player:KinematicBody2D):
+func run(player: KinematicBody2D):
 	player.vx = player.horizontal * midair_speed
 	player.apply_gravity(player.gravity)
 	player.move()

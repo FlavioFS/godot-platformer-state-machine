@@ -1,14 +1,14 @@
-extends "res://Scenes/Player/BasePlayerState.gd"
+extends BasePlayerState
 
 export var climb_speed : float = 200
 
-func enter(player:KinematicBody2D):
+func enter(player: KinematicBody2D):
 	player.tween_to_ladder()
 	.enter(player)
 	player.anim.playback_active = false
 	player.collision_layer = 1
 
-func run(player:KinematicBody2D):
+func run(player: KinematicBody2D):
 	player.vx = 0
 	if player.underwater:
 		player.vy = player.vertical * climb_speed / 2
@@ -24,7 +24,7 @@ func run(player:KinematicBody2D):
 		return "air"
 	return null
 
-func exit(player:KinematicBody2D):
+func exit(player: KinematicBody2D):
 	.exit(player)
 	player.anim.playback_active = true
 	player.collision_layer = 1 | 2

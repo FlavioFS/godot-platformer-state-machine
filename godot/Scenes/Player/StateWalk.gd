@@ -1,8 +1,8 @@
-extends "res://Scenes/Player/BasePlayerState.gd"
+extends BasePlayerState
 
 export var walk_speed : float = 300
 
-func run(player:KinematicBody2D):
+func run(player: KinematicBody2D):
 	if player.vertical > 0:
 		player.collision_layer = 1
 		player.platform_timer.start()

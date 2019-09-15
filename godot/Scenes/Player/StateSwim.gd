@@ -1,16 +1,16 @@
-extends "res://Scenes/Player/BasePlayerState.gd"
+extends BasePlayerState
 
 export var swim_speed : float = 100
 export var gravity : float = 10
 export var anim_speed : float = 1.5
 var original_anim_speed : float
 
-func enter(player:KinematicBody2D):
+func enter(player: KinematicBody2D):
 	player.velocity *= 0.5
 	original_anim_speed = player.anim.playback_speed
 	player.anim.playback_speed = anim_speed
 
-func run(player:KinematicBody2D):
+func run(player: KinematicBody2D):
 	if player.ladder_area and player.vertical < 0:
 		return "ladder"
 	player.vx = player.horizontal * swim_speed
@@ -35,6 +35,6 @@ func run(player:KinematicBody2D):
 	player.move()
 	return "air"
 
-func exit(player:KinematicBody2D):
+func exit(player: KinematicBody2D):
 	player.anim.playback_speed = original_anim_speed
 	player.waves.emitting = false
