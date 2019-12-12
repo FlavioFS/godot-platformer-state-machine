@@ -2,7 +2,7 @@
 A Player state machine demo in Godot.
 
 ## [:tv: Video sample](http://www.youtube.com/watch?v=L62vRaYsDRw)
-[![Preview image failed to load!](github/preview.gif)](http://www.youtube.com/watch?v=L62vRaYsDRw)
+[![Preview image failed to load!](https://i.postimg.cc/pL97fXQn/preview.gif)](http://www.youtube.com/watch?v=L62vRaYsDRw)
 
 ## Features
  - Edge jump tolerance (jump button press)
@@ -30,4 +30,4 @@ Through the **tool** keyword, it is possible to change player skin before runtim
 The skins are located in the [skins directory](godot/Sprites/Player).
 
 ## [:tv: Video Sample](http://www.youtube.com/watch?v=3_7PjK7vzG4)
-[![Preview image failed to load!](github/extra.gif)](http://www.youtube.com/watch?v=3_7PjK7vzG4)
+[![Preview image failed to load!](https://i.postimg.cc/kGsrp1D6/extra.gif)](http://www.youtube.com/watch?v=3_7PjK7vzG4)
